@@ -17,7 +17,6 @@ for file in fileNames:
     file = file[:-5]+file[-5:].lower()
     print("ABRINDO O ARQUIVO "+file)
     shutil.copy2(inputPath+"\\"+file, outputPath+"\\classificado_"+file)
-    # shutil.move(inputPath+"\\"+file, backupPath+"\\"+file)
     f = module.Excel_File(outputPath+"\\classificado_"+file)
     print("HEADER: "+str(f.header))
     print("LISTA DE PLANILHAS: "+str(f.sheet_list))

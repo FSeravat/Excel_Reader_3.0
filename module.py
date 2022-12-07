@@ -6,8 +6,8 @@ class Excel_File:
 
     def __init__(self, file):
         self.dictionary = json.load(open("dictionary.json", encoding='utf-8'))
+        self.blacklist = json.load(open("settings.json", encoding='utf-8'))["blacklist"]
         self.read_excel = load_workbook(file)
-        self.concat = False
         self.findSheets()
         self.findHeader()
         self.formatTable()
@@ -15,9 +15,8 @@ class Excel_File:
 
     def findSheets(self):
         sheet_list = []
-        blacklist = ["capa", "plan1", "plan3","a01","fl capa u-8601","capa-5135","n-1710","planilha1","capa ld se"]
         for sheet in self.read_excel._sheets: 
-            if sheet.sheet_state == "visible" and not blacklist.__contains__(sheet.title.lower().strip()):
+            if sheet.sheet_state == "visible" and not self.blacklist.__contains__(sheet.title.lower().strip()):
                 sheet_list.append(sheet)
         self.sheet_list = sheet_list
         
@@ -44,6 +43,10 @@ class Excel_File:
 
     def formatTable(self):
         for sheet in self.sheet_list:
+            backup = self.read_excel.copy_worksheet(sheet)
+            title = sheet.title
+            sheet.title = "classificado_"+title
+            backup.title = title
             widthList = [30]
             for width in sheet.column_dimensions:
                 widthList.append(sheet.column_dimensions[width].width)
