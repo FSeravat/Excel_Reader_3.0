@@ -1,6 +1,10 @@
 {
   "Lista de Linhas de Aquecimento Externo": ["lista", "linha", "aquecimento", "externo"],
-  "Plantas, Cortes e Detalhes": ["planta", "corte"],
+  "Planta de Sinalização": ["planta", "sinalizacao"],
+  "Plantas de Segurança": ["planta", "seguranca"],
+  "Plantas, Cortes , Detalhes": ["planta", "detalhe"],
+  "Plantas, Cortes ! Detalhes": ["corte", "detalhe"],
+  "Plantas, Cortes e Detalhes": ["planta"],
   "Lista de Equipamentos e Instrumentos": ["lista", "equipamento", "instrumento"],
   "Fluxogramas de Engenharia (P&ID)": ["fluxograma","engenharia"],
   "Lista de Suporte de Mola": ["lista", "suporte", "mola"],
@@ -13,16 +17,14 @@
   "Lista de Suporte": ["lista", "suporte"],
   "Lista de Cargas": ["lista", "carga"],
   "Lista de Circuitos": ["lista", "circuito"],
+  "Lista de Instrumentos": ["lista", "instrumento"],
   "Diagrama unifilar": ["diagrama", "unifilar"],
   "Diagrama trifilar": ["diagrama", "trifilar"],
-  "Diagrama de interligação": ["diagrama", "interligação"],
+  "Diagrama de interligação": ["diagrama", "interligacao"],
+  "Diagramas de Malhas": ["diagrama", "malha"],
   "Listas de Cabos": ["lista", "cabo"],
   "Lista de Bobinas": ["lista", "bobina"],
-  "Lista de Instrumentos": ["lista", "instrumento"],
-  "Diagramas de Malhas": ["diagrama", "malha"],
   "Lista Materiais": ["lista", "material"],
   "Lista de Equipamentos": ["lista", "equipamento"],
-  "Plantas de Segurança": ["planta", "seguranca"],
-  "Planta de Sinalização": ["planta", "sinalizacao"],
-  "Diagrama de Topologia do Sistema/Rede": ["diagrama","topologia","rede"]
+  "Diagrama de Topologia do Sistema\\Rede": ["diagrama","topologia","rede"]
 }
